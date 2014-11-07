@@ -15,6 +15,6 @@ DonutCounter.prototype.addListeners = function() {
 DonutCounter.prototype.incrementerListeners = function() {
   $('#donuts button:first-of-type, #guests button:first-of-type').click(function(){
       var $span = $(this).parent().find("h3 span");
-      $span.text( Number($span.text())++ );
+      $span.text( Number($span.text()) + 1 );
     });
 };
