@@ -11,6 +11,7 @@ function DonutCounter(){
 DonutCounter.prototype.addListeners = function() {
   this.addIncrementerListeners();
   this.addDecrementerListeners();
+  this.addCheckListener();
 };
 
 DonutCounter.prototype.addIncrementerListeners = function() {
@@ -25,6 +26,26 @@ DonutCounter.prototype.addDecrementerListeners = function() {
     var $span = $(this).parent().find("h3 span");
     if ( Number($span.text()) > 0 ) {
       $span.text( Number($span.text()) - 1 );
+    }
+  });
+};
+
+DonutCounter.prototype.addCheckListener = function() {
+  var self = this;
+  $('#check').click(function(){
+    var donutCount = Number( self.$donutCount.text() ),
+        guestCount = Number( self.$guestCount.text() );
+
+    if (donutCount === 0 && guestCount === 0) {
+      $('#status').text('Invite someone you jerk!');
+    } else if ( donutCount > guestCount && guestCount === 0 ) {
+      $('#status').text('Invite someone you jerk!');
+    } else if ( donutCount > (guestCount * 4) ) {
+      $('#status').text('ARE YOU TRYING TO KILL US ALL!?');
+    } else if ( donutCount >= guestCount ) {
+      $('#status').text('Guests are having a blast!');
+    } else {
+      $('#status').text('Guests are sad :(');
     }
   });
 };
