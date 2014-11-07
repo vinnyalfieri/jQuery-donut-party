@@ -9,12 +9,22 @@ function DonutCounter(){
 }
 
 DonutCounter.prototype.addListeners = function() {
-  
+  this.addIncrementerListeners();
+  this.addDecrementerListeners();
 };
 
-DonutCounter.prototype.incrementerListeners = function() {
+DonutCounter.prototype.addIncrementerListeners = function() {
   $('#donuts button:first-of-type, #guests button:first-of-type').click(function(){
-      var $span = $(this).parent().find("h3 span");
-      $span.text( Number($span.text()) + 1 );
-    });
+    var $span = $(this).parent().find("h3 span");
+    $span.text( Number($span.text()) + 1 );
+  });
+};
+
+DonutCounter.prototype.addDecrementerListeners = function() {
+  $('#donuts button:last-of-type, #guests button:last-of-type').click(function(){
+    var $span = $(this).parent().find("h3 span");
+    if ( Number($span.text()) > 0 ) {
+      $span.text( Number($span.text()) - 1 );
+    }
+  });
 };
