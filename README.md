@@ -1,9 +1,3 @@
----
-languages: JavaScript, js
-tags: OO, conditionals, jquery, selectors
-resource: 
----
-
 # Donut App
 Here's the situation.  You're throwing an elegant Donut Party for you and some friends.  It's going to be super classy.  There'll be dancing, dunking, and fingers covered in glazed frosting.
 
