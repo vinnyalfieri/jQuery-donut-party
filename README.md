@@ -8,11 +8,8 @@ Donutitis is a real threat these days. Symptoms include, but are not limited to,
 So like I said, it can be stressful being a host to a donut party.  You need to create a machine that calculates if there are fewer donuts than guests, which will make them sad.  You must also check that there's no more than four donuts per guest, lest you want a slaughter on your hands.  With this app never again will you endure sleepless nights worrying if you have enough donuts on hand for your hungry friends.
 
 ##Before You Start
-```shell
-# Install jasmine:
-gem sources -a http://flatiron:33west26@gems.flatironschool.com
-gem install learn-co
 
+```shell
 # Run Jasmine test suite:
 learn  # runs only in the terminal
 learn -b # runs also in the browser
